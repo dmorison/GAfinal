@@ -1,0 +1,657 @@
+/* 
+Project Name: Commuting Migration
+Client: General Assembly
+Author: Dave Morison
+Developer: Dave
+*/
+
+
+/******************************************
+/* SETUP MOBILE FIRST       
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right; 
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left; 
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+img {
+     max-width: 100%;
+}
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+     background: url("../images/nice_snow.png");
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Center the container*/ 
+.container {
+     width: 95%;
+     margin: 0px auto;
+}
+
+/******************************************
+/* HEADER                   
+/*******************************************/
+
+nav {
+     padding: 10px;
+}
+
+     nav ul {
+          padding: 0px;
+          margin: 0px;
+     }
+
+          nav ul li a {
+               color: #00CE00;
+               font-family: 'Autour One', cursive;
+               font-size: 1.6em;
+               display: block;
+               width: 100%;
+               height: 100%;
+               padding: 8px 16px;
+               text-decoration: none;
+          }
+
+          nav ul li a:hover {
+               font-weight: bold;
+               text-shadow: 1px 1px 2px black;
+          }
+
+          nav ul li a.active {
+               font-weight: bold;
+               text-shadow: 1px 1px 2px black;
+          }
+
+     nav form {
+          background-color: white;
+          float: right;
+          width: 170px;
+          height: 32px;
+          border: 1px solid #CCC;
+          border-radius: 5px;
+          padding: 2px;
+          margin-top: 6px;
+          margin-right: 17px;
+     }
+
+          nav form input {
+               color: #BBB;
+               font-style: italic;
+               float: right;
+               width: 130px;
+               height: 26px;
+               border: none;
+          }
+
+          nav form a img {
+               display: block;
+               float: right;
+               width: 26px;
+               height: 26px;
+          }
+
+header {
+     font-family: 'Autour One', cursive;
+     background: url("../images/tweed.png");
+     background-size: cover;
+
+     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')"; /* For IE 8 */
+     -moz-box-shadow: 5px 5px 20px #888; /* Firefox */
+     -webkit-box-shadow: 5px 5px 20px #888; /* Safari, Chrome */
+     box-shadow: 5px 5px 20px #888; /* CSS 3 */
+     padding-top: 10px;
+}
+
+     header h1 {
+          color: #000;
+          background-color: #00CE00;
+          width: 100%;
+          padding: 20px;
+          border-radius: 7px;
+     }
+
+     header h2 {
+          background-color: #00CE00;
+          width: 100%;
+          padding: 20px;
+          border-radius: 7px;
+     }
+
+     #banimg {
+
+          background: url("../images/elephant.jpg") center no-repeat;
+          background-size: cover;
+
+          width: 90%;
+          height: 253px;
+          margin: 10px auto;
+          border: 7px solid #00CE00;
+          border-radius: 7px;
+          animation: myframe 24s infinite;
+          -webkit-animation: myframe 20s infinite; /* Safari and Chrome */
+     }
+
+     @keyframes myframe 
+     {
+          0%   {background: url("../images/elephant.jpg");}
+          11%  {opacity: 0;}
+          20%  {opacity: 1;}
+          22%  {background: url("../images/traffic.jpg");}
+          31%  {opacity: 0;}
+          40%  {opacity: 1;}  
+          42%  {background: url("../images/flyingcow.jpg");}
+          51%  {opacity: 0;}
+          60%  {opacity: 1;}
+          62%  {background: url("../images/bikecommute.jpg");}
+          71%  {opacity: 0;}
+          80%  {opacity: 1;}
+          82%  {background: url("../images/crazytrain.jpg");}
+          91%  {opacity: 0;}
+          100%  {opacity: 1;} 
+     }
+
+     @-webkit-keyframes myframe /* Safari and Chrome */
+     {
+          0%   {background: url("../images/elephant.jpg");}
+          11%  {opacity: 0;}
+          20%  {opacity: 1;}
+          22%  {background: url("../images/traffic.jpg");}
+          31%  {opacity: 0;}
+          40%  {opacity: 1;}  
+          42%  {background: url("../images/flyingcow.jpg");}
+          51%  {opacity: 0;}
+          60%  {opacity: 1;}
+          62%  {background: url("../images/bikecommute.jpg");}
+          71%  {opacity: 0;}
+          80%  {opacity: 1;}
+          82%  {background: url("../images/crazytrain.jpg");}
+          91%  {opacity: 0;}
+          100%  {opacity: 1;}
+     }
+
+/******************************************
+/* MAIN CONTENT SECTION STYLES                   
+/*******************************************/
+
+section {
+     font-family: 'Autour One', cursive;
+     font-size: 1.2em;
+     background-color: #F2F211;
+     width: 100%;
+     padding: 20px;
+     margin: 50px auto;
+     border: 7px solid #00CE00;
+     border-radius: 7px;
+
+     -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')"; /* For IE 8 */
+     -moz-box-shadow: 5px 5px 20px #888; /* Firefox */
+     -webkit-box-shadow: 5px 5px 20px #888; /* Safari, Chrome */
+     box-shadow: 5px 5px 20px #888; /* CSS 3 */
+}
+
+     section form label {
+          padding-right: 6px;
+          font-size: 0.8em;
+     }
+
+     section form label:first-child {
+          font-size: 1em;
+     }
+
+     #dist, #hours, #minutes {
+          width: 70px;
+          padding: 5px;
+     }
+
+     #dist {
+          margin: 10px 6px 0px 0px;
+     }
+
+     section form a {
+          background-color: #00CE00;
+          color: #000;
+          text-decoration: none;
+          text-align: center;
+          width: 100%;
+          height: 30px;
+          display: block;
+          padding: 5px;
+          margin-top: 12px;
+     }
+
+     section form a:hover {
+          -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')"; /* For IE 8 */
+          -moz-box-shadow: 5px 5px 20px #888; /* Firefox */
+          -webkit-box-shadow: 5px 5px 20px #888; /* Safari, Chrome */
+          box-shadow: 5px 5px 20px #888; /* CSS 3 */
+          font-weight: bold;
+     }
+
+     section p {
+          margin-bottom: 3px;
+     }
+
+     section span {
+          display: block;
+          height: 25px;
+          background-color: #FFF;
+          padding: 3px;
+          font-weight: bold;
+     }
+
+     figure img {
+          border: 2px solid #00CE00;
+     }
+
+          figure figcaption {
+               font-size: 1em;
+               text-transform: capitalize;
+          }
+
+
+/******************************************
+/* ABOUT PAGE STYLES                  
+/*******************************************/
+
+h2 blockquote {
+     margin: 0px;
+}
+
+.wrapper {
+     font-size: 1em;
+     height: 100%;
+}
+
+     #descrip {
+          background: url('../images/peakroad.jpg') center;
+     }
+     #mapper {
+          background: url('../images/mapper.jpg') center;
+     }
+     #survey {
+          background: url('../images/survey.jpg') center;
+     }
+     #uklondon {
+          background: url('../images/peaktrain.jpg') center;
+     }
+
+          .about {
+               background-color: #F2F211;
+               opacity: 0.8;
+          }
+
+          .wrapper p, blockquote {
+               font-weight: bold;
+               color: #000;
+               padding: 4px;
+               margin: 0px;
+          }
+
+blockquote {
+     font-style: italic;
+}
+
+     blockquote a {
+          color: #000;
+     }
+
+/******************************************
+/* FOOTER                   
+/*******************************************/
+
+#topfoot img {
+     width: 100%;
+     margin-bottom: -6px;
+}
+
+footer {
+     background-color: rgb(0, 69, 0);
+     padding: 30px;
+}
+
+     .infoot {
+          width: 50%;
+          float: left;
+     }
+
+          .infoot p {
+               color: #FFF;
+               font-family: 'Autour One', cursive;
+               padding: 8px;
+               text-align: right;
+          }
+
+          footer ul li {
+               width: 95%;
+               list-style-type: none;
+               border-top: 1px solid #CCC;
+          }
+
+          footer ul li:first-child {
+               border: none;
+          }
+
+               footer ul li a {
+                    color: #FFF;
+                    font-family: 'Autour One', cursive;
+                    font-size: 1.4em;
+                    display: block;
+                    padding: 8px;
+                    text-decoration: none;
+                    text-align: left;
+               }
+
+               footer a:hover {
+                    text-shadow: 1px 1px 2px white;
+               }
+
+     /* Social Media Sprite */
+     #socialmedia {
+          display: inline-block;
+          width: 100%;
+     }
+
+          #socialmedia ul {
+               margin: 0px;
+               float: right;
+          }
+
+               #socialmedia ul li {
+                    width: 56px;
+                    border: none;
+                    float: left;
+                    margin: 0px 5px;
+               }
+
+                    #socialmedia ul li a {
+                         text-indent: 300%; /*text indent had to be greater than 100% to be properly hidden in Firefox*/
+                         white-space: nowrap;
+                         overflow: hidden;
+                         height: 56px;
+                         width: 56px;
+                         display: block;
+                         background-image: url('../images/socialNav.png');
+                         border: none;
+                    }
+
+                    .linkedin a {
+                         background-position: 0px 63px;
+                    }
+
+                    .twitter a {
+                         background-position: 188px 63px;
+                    }
+
+                    .facebook a {
+                         background-position: 130px 63px;
+                    }
+
+                    /*
+                    This hover technique using background-position-y does not work in Firefox 
+                    so each link has to have their own hover using backgroun-position
+                    
+                    #socialmedia ul li a:hover {
+                         background-position-y: 0px;
+                         background-color: #000;
+                    }
+                    */
+
+                    .linkedin a:hover {
+                         background-position: 0px 0px;
+                    }
+
+                    .twitter a:hover {
+                         background-position: 188px 0px;
+                    }
+
+                    .facebook a:hover {
+                         background-position: 130px 0px;
+                    }
+
+/******************************************
+/* CONTACT FORM STYLES                   
+/*******************************************/
+
+#contact {
+     display: none;
+     width: 60%;
+     position: absolute;
+     z-index: 1;
+     background-color: rgba(0, 0, 0, 0.6);
+     color: #FFF;
+     font-size: 1.2em;
+     border: 7px solid #00CE00;
+     border-radius: 7px;
+     padding: 20px;
+     margin: 30px 20%;
+}
+
+     #contact a {
+          color: #FFF;
+          float: right;
+     }
+
+     input {
+          margin-right: 5px;
+          margin-bottom: 10px;
+     }
+
+     .userinfo {
+          background-color: rgba(221, 221, 221, 0.7);
+          color: #000;
+          border: none;
+          width: 100%;
+          height: 30px;
+          padding: 5px;
+     }
+
+     #nameError {
+          color: red;
+          display: none;
+     }
+     #emailError {
+          color: red;
+          display: none;
+     }
+     #msgError {
+          color: red;
+          display: none;
+     }
+
+     textarea {
+          width: 100%;
+          background-color: rgba(221, 221, 221, 0.7);
+          color: #000;
+          border: none;
+          padding: 5px;
+          margin: 20px 0px;
+     }
+
+     #button {
+          padding: 8px 18px;
+          background-color: #00CE00;
+          border: none;
+     }
+
+          #button:hover {
+               background-color: #00AD00;
+          }
+
+/******************************************
+/* RESPONSIVE STYLES                   
+/*******************************************/
+
+/******************************************
+/* 480px and up                   
+/*******************************************/
+
+@media only screen and (min-width: 480px) {
+     .container {
+          width: 90%;
+          margin: 0px auto;
+     }
+
+               nav ul li {
+
+                    float: left;
+                    border-top: none;
+                    border-left: 1px solid #00CE00;
+               }
+
+               nav ul li:first-child {
+                    border: none;
+               }
+
+               #banimg {
+                    width: 320px;
+               }
+
+          section {
+               width: 90%;
+          }
+
+               section form label {
+                    font-size: 1em;
+               }
+
+          .wrapper {
+               margin: 20px 10px
+          }
+
+               .userinfo {
+                    width: 200px;
+               }
+
+}
+
+/******************************************
+/* 600px and up                   
+/*******************************************/
+
+@media only screen and (min-width: 600px) {
+     section {
+          width: 70%;
+     }
+
+          footer ul li {
+               width: 60%;
+          }
+
+     .wrapper {
+          float: left;
+          width: 45%;
+          height: 310px;
+     }
+
+          .about {
+               height: 265px;
+          }
+
+     textarea {
+          width: 70%;
+     }
+}
+
+/******************************************
+/* 780px and up                   
+/*******************************************/
+
+@media only screen and (min-width: 780px) {
+     header h1 {
+          width: 40%;
+          float: left;
+          margin: 30px 20px;
+     }
+
+     header h2 {
+          width: 40%;
+          float: left;
+          margin: 20px 20px;
+     }
+
+     #banimg {
+          float: right;
+          margin: 20px;
+     }
+
+     section {
+          width: 60%
+     }
+
+     .wrapper {
+          width: 42%;
+          height: 263px;
+          margin: 20px;
+     }
+
+          .about {
+               height: 209px;
+          }
+}
+
+/******************************************
+/* 1024px and up                   
+/*******************************************/
+
+@media only screen and (min-width: 1024px) {
+     .container {
+          width: 80%;
+          margin: 0px auto;
+     }
+
+          header h1 {
+               width: 50%;
+          }
+
+          header h2 {
+               width: 50%;
+          }
+
+     section {
+          width: 55%;
+     }
+
+     .wrapper {
+          margin: 30px;
+          height: 219px;
+     }
+
+          .about {
+               height: 165px;
+          }
+}

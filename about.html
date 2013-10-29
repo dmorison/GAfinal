@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="about commuting" content="commuting facts">
+    	<meta name="survey, definition" content="uk, london, world">
+	
+		<title>About Commuting</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- google fonts link -->
+		<link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
+		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/application.js"></script>
+	</head>
+
+	<body>
+		<!-- BEGIN top nav bar -->
+		<nav>
+			<div class="container clearfix">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="indigenous.html">Indigenous</a></li>
+				</ul>
+				<!-- Search box -->
+				<form>
+					<label for="search"><a href="https://www.google.co.uk"><img src="images/search_icon2.gif" /></a></label>
+					<input type="text" name="seach" id="search" value="Search" />
+				</form>
+			</div><!-- END centered clearfix container -->
+		</nav><!-- END top nav bar -->
+		<!-- BEGIN header containing h1 h2 and banner image -->
+		<header>
+			<div class="container clearfix">
+
+				<a href="index.html"><h1>About Commuting</h1></a>
+				<div id="banimg"></div>
+				<h2><blockquote>Commute: travel some distance between one's home and place of work on a regular basis. <a href="http://www.oxforddictionaries.com/definition/english/commute">-Oxford English Dictionary</a></blockquote></h2>
+
+			</div><!-- END centered clearfix container -->
+		</header><!-- END header -->
+		<!-- BEGIN main content area wrapped inside article -->
+		<article class="container clearfix">
+
+			<section id="descrip" class="wrapper">
+				<div class="about">
+					<p>A fun (rather random) illustration comparing the speed at which we commute at to animals while also highlighting the diversity of commuting around the world with some fun facts. (All packaged in a fully responsive webpage demonstrating some uses of JavaScript and jQuery)</p>
+				</div>
+			</section>
+			
+			<section id="mapper" class="wrapper">
+				<div class="about">
+					<blockquote>The world average commuting time for people who work is 40 minutes (one-way). Thialand has the worlds longest commuting time with the average working person spending 2 hours commuting per day, while Malawi has the shortest commuting times of around 2 minutes (one-way). <a href="http://www.worldmapper.org">-World Mapper</a></blockquote>
+				</div>
+			</section>
+
+			<section id="survey" class="wrapper">
+				<div class="about">
+					<blockquote>According to the <a href="http://www-03.ibm.com/press/us/en/pressrelease/35359.wss">2011 IBM Commuter Pain Survey</a>, Mexico City scored the highest.</blockquote>
+				</div>
+			</section>
+
+			<section id="uklondon" class="wrapper">
+				<div class="about">
+					<blockquote>The average London (UK) worker spends 1 hour 22 minutes per day commuting, while 9% of the UK work force spends at least 3 hours commuting per day! <a href="http://www.dailymail.co.uk/news/article-2325262/Rise-super-commuter-Number-Britons-travelling-hours-day-work-soars-50-cent-years.html">-The Daily Mail</a> </blockquote>
+				</div>
+			</section>
+
+		</article><!-- END article -->
+		<!-- BEGIN hidden contact form displayed only on clicking 'contact' -->
+		<a id="contactform"></a>
+		<div id="topfoot">
+			<div id="contact" class="clearfix">
+				<a href="about.html">Close</a>
+				<form id="userinput">
+					<label for="name">Name</label><br />
+					<input type="text" name="name" id="name" class="userinfo" />
+					<span id="nameError">*Please enter a valid name</span><br />
+					
+					<label for="email">Email</label><br />
+					<input type="email" name="email" id="email" class="userinfo" />
+					<span id="emailError">*Please enter a valid email address</span><br />
+
+					<textarea name="message" rows="8" id="usermsg" placeholder="Write message here..."></textarea><br />
+
+					<input type="submit" name="submit" value="Send" id="button" />
+				</form>
+			</div>
+			<img src="images/homecity4.png"><!-- bottom image covering width of entire page -->
+		</div><!-- END contact form -->
+		<!-- BEGIN footer -->
+		<footer>
+			<div class="container clearfix">
+				<div class="infoot">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="indigenous.html">Indigenous</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#contactform" id="contlink">Contact</a></li>
+					</ul>
+				</div><!-- END left footer block -->
+
+				<div class="infoot">
+					<!-- BEGIN #socialmedia sprite -->
+					<div id="socialmedia">
+						<ul>
+							<li class="linkedin"><a href="http://www.linkedin.com/pub/david-morison/65/539/540" target="_blank">LinkedIn</a></li>
+							<li class="twitter"><a href="https://twitter.com/moredave" target="_blank">Twitter</a></li>
+							<li class="facebook"><a href="https://www.facebook.com/dmorison1" target="_blank">Facebook</a></li>
+						</ul>
+					</div><!-- END #socialmedia sprite -->
+					<p>&copy; 2013 Dave Morison</p>
+				</div><!-- END right footer block -->
+			</div><!-- END centered clearfix container -->
+		</footer><!-- END footer -->
+			
+	</body>
+</html>

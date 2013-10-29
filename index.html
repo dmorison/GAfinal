@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="commuting and animal speeds" content="comparing the speed of commuting to the speed of animals">
+    	<meta name="commute, commuting, city, animals" content="distance, time, average speed, animals">
+	
+		<title>Commuting Migration</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<style type="text/css">
+			body {
+				background: url("images/roadBG.png") repeat-y fixed;
+     			background-position: center;
+			}
+		</style>
+
+		<!-- google fonts link -->
+		<link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
+		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/application.js"></script>
+	</head>
+
+	<body>
+		<!-- BEGIN top nav bar -->
+		<nav>
+			<div class="container clearfix">
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="indigenous.html">Indigenous</a></li>
+				</ul>
+				<!-- Search box -->
+				<form>
+					<label for="search"><a href="https://www.google.co.uk"><img src="images/search_icon2.gif" /></a></label>
+					<input type="text" name="seach" id="search" placeholder="Search" />
+				</form>
+			</div><!-- END centered clearfix container -->
+		</nav><!-- END top nav bar -->
+		<!-- BEGIN header containing h1 h2 and banner image -->
+		<header>
+			<div class="container clearfix">
+
+				<a href="index.html"><h1>Commuting Migration</h1></a>
+				<div id="banimg"></div>
+				<h2>What animal does my commuting speed relate to?</h2>
+
+			</div><!-- END centered clearfix container -->
+		</header><!-- END header -->
+		<!-- BEGIN main content area wrapped inside article -->
+		<article class="container clearfix">
+
+			<section>
+				<form>
+					<label for="dist">How far do I commute?</label><br />
+					<input type="value" name="distance" id="dist" value=0 />
+					<input type="radio" name="units" id="miles" checked="checked" />
+					<label for="miles">Miles</label>
+					<input type="radio" name="units" id="kms" />
+					<label for="kms">Kilometers</label>
+				</form>
+			</section>
+			<section>
+				<p>How long does it take me?</p>
+				<form>
+					<input type="value" name="hours" id="hours" value=0 />
+					<label for="hours">Hours</label>
+					<input type="value" name="minutes" id="minutes" value=0 />
+					<label for="minutes">Minutes</label>
+					<a id="calculate" href="#page">Calculate</a>
+				</form>
+			</section>
+			<a id="page"></a><!-- For positioning the page on the results when clicking the calculate button -->
+			<section>
+				<p>You commute at the speed of a:</p>
+				<figure id="animalimg">
+					<img src="" alt="Animal image" />
+					<figcaption></figcation>
+				</figure>
+			</section>
+
+		</article><!-- END article -->
+		<!-- BEGIN hidden contact form displayed only on clicking 'contact' -->
+		<a id="contactform"></a>
+		<div id="topfoot">
+			<div id="contact" class="clearfix">
+				<a href="index.html">Close</a>
+				<form id="userinput">
+					<label for="name">Name</label><br />
+					<input type="text" name="name" id="name" class="userinfo" />
+					<span id="nameError">*Please enter a valid name</span><br />
+					
+					<label for="email">Email</label><br />
+					<input type="email" name="email" id="email" class="userinfo" />
+					<span id="emailError">*Please enter a valid email address</span><br />
+
+					<textarea name="message" rows="8" id="usermsg" placeholder="Write message here..."></textarea><br />
+					<span id="msgError">*Please enter a text message</span>
+
+					<input type="submit" name="submit" value="Send" id="button" />
+				</form>
+			</div>
+			<img src="images/homecity4.png"><!-- bottom image covering width of entire page -->
+		</div><!-- END contact form -->
+		<!-- BEGIN footer -->
+		<footer>
+			<div class="container clearfix">
+				<div class="infoot">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="indigenous.html">Indigenous</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#contactform" id="contlink">Contact</a></li>
+					</ul>
+				</div><!-- END left footer block -->
+
+				<div class="infoot">
+					<!-- BEGIN #socialmedia sprite -->
+					<div id="socialmedia">
+						<ul>
+							<li class="linkedin"><a href="http://www.linkedin.com/pub/david-morison/65/539/540" target="_blank">LinkedIn</a></li>
+							<li class="twitter"><a href="https://twitter.com/moredave" target="_blank">Twitter</a></li>
+							<li class="facebook"><a href="https://www.facebook.com/dmorison1" target="_blank">Facebook</a></li>
+						</ul>
+					</div><!-- END #socialmedia sprite -->
+					<p>&copy; 2013 Dave Morison</p>
+				</div><!-- END right footer block -->
+			</div><!-- END centered clearfix container -->
+		</footer><!-- END footer -->
+			
+	</body>
+</html>

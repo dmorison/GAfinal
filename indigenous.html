@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="local commuting" content="country commuting and animal facts">
+    	<meta name="country, capital, commute, animal, speed" content="country, commute, animal">
+	
+		<title>Indigenous Commuting</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<style type="text/css">
+			body {
+				background: url("images/railBG.png") repeat-y fixed;
+     			background-position: center;
+			}
+		</style>
+
+		<!-- google fonts link -->
+		<link href='http://fonts.googleapis.com/css?family=Autour+One' rel='stylesheet' type='text/css'>
+		
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/application.js"></script>
+	</head>
+
+	<body>
+		<!-- BEGIN top nav bar -->
+		<nav>
+			<div class="container clearfix">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="indigenous.html" class="active">Indigenous</a></li>
+				</ul>
+				<!-- Search box -->
+				<form>
+					<label for="search"><a href="https://www.google.co.uk"><img src="images/search_icon2.gif" /></a></label>
+					<input type="text" name="seach" id="search" value="Search" />
+				</form>
+			</div><!-- END centered clearfix container -->
+		</nav><!-- END top nav bar -->
+		<!-- BEGIN header containing h1 h2 and banner image -->
+		<header>
+			<div class="container clearfix">
+
+				<a href="index.html"><h1>Indigenous Commuting</h1></a>
+				<div id="banimg"></div>
+				<h2>How long does it take to commute in various countries across the world?</h2>
+
+			</div><!-- END centered clearfix container -->
+		</header><!-- END header -->
+		<!-- BEGIN main content area wrapped inside article -->
+		<article class="container clearfix">
+
+			<section>
+				<form>
+					<select id="countryreg">
+						<option value="-1">Choose a country</option>
+						<option value="alaska">Alaska</option>
+						<option value="mexico">Mexico</option>
+						<option value="australia">Australia</option>
+						<option value="uk">United Kingdom</option>
+					</select>
+					<a id="calcountry" href="#page">Submit</a>
+				</form>
+			</section>
+
+			<a id="page"></a><!-- For positioning the page on the results when clicking the calculate button -->
+			<section>
+				<p>Country:</p><span id="country"></span>
+				<p>Capital city:</p><span id="capital"></span>
+				<p>Most common method used for commuting:</p><span id="meth"></span>
+				<p>Average time spent commuting daily:</p><span id="comtime"></span>
+			</section>
+			<section>
+				<p>Indigenous animal:</p>
+				<figure id="indigimg">
+					<img src="" alt="Animal image" />
+					<figcaption></figcation>
+				</figure>
+				<p>Top speed:</p><span id="indigspd"></span>
+			</section>
+
+		</article><!-- END article -->
+		<!-- BEGIN hidden contact form displayed only on clicking 'contact' -->
+		<a id="contactform"></a>
+		<div id="topfoot">
+			<div id="contact" class="clearfix">
+				<a href="indigenous.html">Close</a>
+				<form id="userinput">
+					<label for="name">Name</label><br />
+					<input type="text" name="name" id="name" class="userinfo" />
+					<span id="nameError">*Please enter a valid name</span><br />
+					
+					<label for="email">Email</label><br />
+					<input type="email" name="email" id="email" class="userinfo" />
+					<span id="emailError">*Please enter a valid email address</span><br />
+
+					<textarea name="message" rows="8" id="usermsg" placeholder="Write message here..."></textarea><br />
+
+					<input type="submit" name="submit" value="Send" id="button" />
+				</form>
+			</div>
+			<img src="images/homecity4.png"><!-- bottom image covering width of entire page -->
+		</div><!-- END contact form -->
+		<!-- BEGIN footer -->
+		<footer>
+			<div class="container clearfix">
+				<div class="infoot">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="indigenous.html">Indigenous</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#contactform" id="contlink">Contact</a></li>
+					</ul>
+				</div><!-- END left footer block -->
+
+				<div class="infoot">
+					<!-- BEGIN #socialmedia sprite -->
+					<div id="socialmedia">
+						<ul>
+							<li class="linkedin"><a href="http://www.linkedin.com/pub/david-morison/65/539/540" target="_blank">LinkedIn</a></li>
+							<li class="twitter"><a href="https://twitter.com/moredave" target="_blank">Twitter</a></li>
+							<li class="facebook"><a href="https://www.facebook.com/dmorison1" target="_blank">Facebook</a></li>
+						</ul>
+					</div><!-- END #socialmedia sprite -->
+					<p>&copy; 2013 Dave Morison</p>
+				</div><!-- END right footer block -->
+			</div><!-- END centered clearfix container -->
+		</footer><!-- END footer -->
+			
+	</body>
+</html>
