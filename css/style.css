@@ -163,7 +163,8 @@ header {
           border: 7px solid #00CE00;
           border-radius: 7px;
           animation: myframe 24s infinite;
-          -webkit-animation: myframe 20s infinite; /* Safari and Chrome */
+          -webkit-animation: myframe 24s infinite; /* Safari and Chrome */
+          -moz-animation: myframe 24s infinite; /* Firefox */
      }
 
      @keyframes myframe 
@@ -186,6 +187,25 @@ header {
      }
 
      @-webkit-keyframes myframe /* Safari and Chrome */
+     {
+          0%   {background: url("../images/elephant.jpg");}
+          11%  {opacity: 0;}
+          20%  {opacity: 1;}
+          22%  {background: url("../images/traffic.jpg");}
+          31%  {opacity: 0;}
+          40%  {opacity: 1;}  
+          42%  {background: url("../images/flyingcow.jpg");}
+          51%  {opacity: 0;}
+          60%  {opacity: 1;}
+          62%  {background: url("../images/bikecommute.jpg");}
+          71%  {opacity: 0;}
+          80%  {opacity: 1;}
+          82%  {background: url("../images/crazytrain.jpg");}
+          91%  {opacity: 0;}
+          100%  {opacity: 1;}
+     }
+
+     @-moz-keyframes myframe /* Firefox */
      {
           0%   {background: url("../images/elephant.jpg");}
           11%  {opacity: 0;}

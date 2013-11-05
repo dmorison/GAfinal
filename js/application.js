@@ -54,7 +54,7 @@ var alaska = {
 	capital: "Juneau",
 	meth: "Car",
 	comtime: "10 minutes",
-	animal: "Bear",
+	animal: "bear",
 	animalspd: "22 mph",
 };
 
@@ -63,7 +63,7 @@ var mexico = {
 	capital: "Mexico City",
 	meth: "Car",
 	comtime: "1 hour",
-	animal: "Armadillo",
+	animal: "armadillo",
 	animalspd: "30 mph",
 };
 
@@ -72,7 +72,7 @@ var australia = {
 	capital: "Canberra",
 	meth: "Car",
 	comtime: "20 minutes",
-	animal: "Kangaroo",
+	animal: "kangaroo",
 	animalspd: "38 mph",
 };
 
@@ -81,7 +81,7 @@ var uk = {
 	capital: "London",
 	meth: "Car",
 	comtime: "41 minutes",
-	animal: "Deer",
+	animal: "deer",
 	animalspd: "43 mph",
 };
 
